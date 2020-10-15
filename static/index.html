@@ -1,0 +1,153 @@
+<!DOCTYPE html5>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-86">
+    <title>Cloud Robotics Playground</title>
+    <link rel="icon" type="image/png" href="https://media.licdn.com/dms/image/C4E0BAQGZyIKrG5vsiQ/company-logo_200_200">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <img src="https://media.licdn.com/dms/image/C4E0BAQGZyIKrG5vsiQ/company-logo_200_200/0?e=2159024400&v=beta&t=QOur6aKqiRZzAQAKWYUKVw33h9X_zh4hnnWA6g30Zi0">
+   <h1>Cloud Robotics Playground</h1>
+     <br></br>
+
+ <!--GetMachine: receive id of machine and return the info of the same-->
+ <form action="/getmachine" method="POST">
+  <label> Get Machine</label>
+ <br></br>
+  <p><label for="id"> ID:</label>
+  <input type="text" name="carID" id="carID"></p>
+  <input type="submit" value='Get Machine'></button>
+  </form>
+  <br></br>
+
+   <!-- NewMachine: receive arg for creat new machine -->
+   <form method='POST' action='/newmachine'>
+   <label>Create New Machine</label>
+   <br></br>
+   <p><label for="id"> ID:</label>
+   <input type="text" name="carID" id="carID"></p>
+   <p><label for="make">Owner:</label>
+   <input type="text" name="owner" id="owner"></p>
+   <p><label for="model">Reserve Price:</label>
+   <input type="text" name="reserveprice" id="reserveprice"></p>
+   <p><label for="colour">Worked Hours:</label>
+   <input type="text" name="workedhours" id="workedhours"></p>
+   <p><label for="owner">Price per Hour</label>
+   <input type="text" name="priceperhour" id="priceperhour"></p>
+   <input type='submit' value="Add New Machine"></p>
+  </form>
+  <br></br>
+
+    <!--ReserveMachine: return the place reserved when the machine is reserved-->
+     <form method='POST' action='/reservemachine'>
+    <label>Reserve Machine</label>
+    <br></br>
+     <p><label for="id"> ID:</label>
+     <input type="text" name="carID" id="carID"></p>
+     <p><label for="lesseeAdd">Add Lessee:</label>
+     <input type="text" name="lesseeAdd" id="lesseeAdd"></p>
+     <p><label for="rentaltime">Rental time:</label>
+     <input type="text" name="rentaltime" id="rentaltime"></p>
+     <p><label for="placeofdeliveryAdd"> Add Place of delivery:</label>
+     <input type="text" name="placeofdeliveryAdd" id="placeofdeliveryAdd"></p>
+     <input type='submit' value=" Reserve Machine"></p>
+      </form>
+      <br></br>
+
+
+      <form action="/sentmachine" method="POST">
+      <label>Sent Machine</label>
+      <br></br>
+      <p><label for="id"> ID:</label>
+      <input type="text" name="carID" id="carID"></p>
+      <input type="submit" value='Sent Machine'></button>
+      </form>
+      <br></br>
+
+
+      <form action="/receivedmachine" method="POST">
+      <label>Received Machine</label>
+      <br></br>
+      <p><label for="id"> ID:</label>
+      <input type="text" name="carID" id="carID"></p>
+      <input type="submit" value='Received'></button>
+      </form>
+      <br></br>
+
+
+      <form action="/payperuse" method="POST">
+      <label>Pay per use</label>
+      <br></br>
+      <p><label for="id"> ID:</label>
+      <input type="text" name="carID" id="carID"></p>
+      <p><label for="id"> work hours:</label>
+      <input type="text" name="workhours" id="workhours"></p>
+      <input type="submit" value='work'></button>
+      </form>
+      <br></br>
+
+      <form action="/returnmachine" method="POST">
+      <label>Return machine</label>
+      <br></br>
+      <p><label for="id"> ID:</label>
+      <input type="text" name="carID" id="carID"></p>
+      <input type="submit" value='Return'></button>
+      </form>
+      <br></br>
+
+      <form action="/machineincompany" method="POST">
+      <label>Machine in company</label>
+      <br></br>
+      <p><label for="id"> ID:</label>
+      <input type="text" name="carID" id="carID"></p>
+      <input type="submit" value='In Company'></button>
+      </form>
+      <br></br>
+
+      <form action="/machineinmaintenance" method="POST">
+      <label>Machine in Maintenance</label>
+      <br></br>
+      <p><label for="id"> ID:</label>
+      <input type="text" name="carID" id="carID"></p>
+      <input type="submit" value='In Company'></button>
+      </form>
+      <br></br>
+  
+
+      <form action="/availablemachine" method="POST">
+      <label>Machine available</label>
+      <br></br>
+      <p><label for="id"> ID:</label>
+      <input type="text" name="carID" id="carID"></p>
+      <input type="submit" value='Available'></button>
+      </form>
+      <br></br>
+
+
+      <form action="/updatereserveprice" method="POST">
+      <label>Update reserve price</label>
+      <br></br>
+      <p><label for="id"> ID:</label>
+      <input type="text" name="carID" id="carID"></p>
+      <p><label for="reservepriceAdd">Add new reserved price:</label>
+      <input type="text" name="reservepriceAdd" id="reservepriceAdd"></p>
+      <input type="submit" value='Update Reserve price'></button>
+      </form>
+      <br></br>
+
+      <form action="/updatepriceperhour" method="POST">
+      <label>Update price per hour</label>
+      <br></br>
+      <p><label for="id"> ID:</label>
+      <input type="text" name="carID" id="carID"></p>
+      <p><label for="priceperhour">Add New Price:</label>
+      <input type="text" name="priceperhour" id="priceperhour"></p>
+      <input type="submit" value='Update Price Per Hour'></button>
+      </form>
+      <br></br>
+
+     </body>
+     </html>
