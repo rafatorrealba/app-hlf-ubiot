@@ -8,6 +8,7 @@ import (
 	"github.com/hyperledger/fabric-sdk-go/pkg/gateway"
 )
 
+// Used by all functions to identify
 func PopulateWallet(wallet *gateway.Wallet) error {
 	credPath := filepath.Join(
 		"/home",

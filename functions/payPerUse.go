@@ -60,8 +60,10 @@ func PayPerUse(id string, workhours string) string {
 		os.Exit(1)
 	}
 
+	// Get name of the compiled smart contract
 	contract := network.GetContract("basic")
 
+	// Execute smart contract function with args
 	result, err := contract.SubmitTransaction("org.example.com.ComplexContract:PayPerUse", id, workhours)
 	if err != nil {
 		fmt.Printf("Failed to submit transaction: %s\n", err)

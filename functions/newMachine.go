@@ -60,8 +60,10 @@ func NewMachine(id string, lessor string, reserveprice string, workedhours strin
 		os.Exit(1)
 	}
 
+	// Get name of the compiled smart contract
 	contract := network.GetContract("basic")
 
+	// Execute smart contract function with args
 	result, err := contract.SubmitTransaction("org.example.com.ComplexContract:NewMachine", id, lessor, reserveprice, workedhours, priceperhour)
 	if err != nil {
 		fmt.Printf("Failed to submit transaction: %s\n", err)

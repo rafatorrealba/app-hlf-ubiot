@@ -60,8 +60,10 @@ func GetMachine(id string) string {
 		os.Exit(1)
 	}
 
+	// Get name of the compiled smart contract
 	contract := network.GetContract("basic")
 
+	// Execute smart contract function with args
 	result, err := contract.EvaluateTransaction("org.example.com.ComplexContract:GetMachine", id)
 	if err != nil {
 		fmt.Printf("Failed to evaluate transaction: %s\n", err)

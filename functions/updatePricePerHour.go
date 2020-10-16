@@ -60,8 +60,10 @@ func UpdatePricePerHour(id string, priceperhour string) string {
 		os.Exit(1)
 	}
 
+	// Get name of the compiled smart contract
 	contract := network.GetContract("basic")
 
+	// Execute smart contract function with args
 	result, err := contract.SubmitTransaction("org.example.com.ComplexContract:UpdatePricePerHour", id, priceperhour)
 	if err != nil {
 		fmt.Printf("Failed to submit transaction: %s\n", err)
