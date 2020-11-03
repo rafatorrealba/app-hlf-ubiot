@@ -35,8 +35,8 @@ func ReserveMachine(id string, lesseeAdd string, rentaltimeAdd string, placeofde
 
 	ccpPath := filepath.Join(
 		"/home",
-		"alejandro",
-		"fabric-samples",
+		"rtorrealba",
+		"ubiot-network",
 		"test-network",
 		"organizations",
 		"peerOrganizations",

@@ -35,8 +35,8 @@ func NewMachine(id string, lessor string, reserveprice string, workedhours strin
 
 	ccpPath := filepath.Join(
 		"/home",
-		"alejandro",
-		"fabric-samples",
+		"rtorrealba",
+		"ubiot-network",
 		"test-network",
 		"organizations",
 		"peerOrganizations",

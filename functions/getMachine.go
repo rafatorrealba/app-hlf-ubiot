@@ -35,8 +35,8 @@ func GetMachine(id string) string {
 
 	ccpPath := filepath.Join(
 		"/home",
-		"alejandro",
-		"fabric-samples",
+		"rtorrealba",
+		"ubiot-network",
 		"test-network",
 		"organizations",
 		"peerOrganizations",

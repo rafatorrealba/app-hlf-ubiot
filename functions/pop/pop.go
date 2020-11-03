@@ -12,8 +12,8 @@ import (
 func PopulateWallet(wallet *gateway.Wallet) error {
 	credPath := filepath.Join(
 		"/home",
-		"alejandro",
-		"fabric-samples",
+		"rtorrealba",
+		"ubiot-network",
 		"test-network",
 		"organizations",
 		"peerOrganizations",
